@@ -2,6 +2,7 @@ package com.example.mvvmaechiticura
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 import org.koin.core.component.KoinComponent
@@ -11,6 +12,7 @@ import org.koin.core.component.inject
 
 class MainActivity : AppCompatActivity(), KoinComponent {
     val classA:ClassA by inject()
+    val viewmodel:MyViewmodel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

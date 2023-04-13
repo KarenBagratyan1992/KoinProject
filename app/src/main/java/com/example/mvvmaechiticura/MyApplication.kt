@@ -1,6 +1,7 @@
 package com.example.mvvmaechiticura
 
 import android.app.Application
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 
@@ -21,6 +22,9 @@ class MyApplication: Application() {
          }
          single <ClassC>{
              ClassC(99,"")
+         }
+         viewModel<MyViewmodel> {
+             MyViewmodel()
          }
      }
         startKoin {
